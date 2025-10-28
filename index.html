@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Klicka på knappar!</title>
+  <title>Klicka & få svar!</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -55,11 +55,13 @@
 
     #result {
       margin-top: 40px;
-      font-size: 60px;
+      font-size: 36px;
       font-weight: bold;
       color: #fff;
       text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
       min-height: 80px;
+      text-align: center;
+      padding: 0 20px;
     }
   </style>
 </head>
@@ -67,18 +69,28 @@
   <h1>Klicka på en knapp!</h1>
   
   <div class="buttons">
-    <button onclick="showNumber(1)">1</button>
-    <button onclick="showNumber(2)">2</button>
-    <button onclick="showNumber(3)">3</button>
-    <button onclick="showNumber(4)">4</button>
-    <button onclick="showNumber(5)">5</button>
+    <button onclick="showText(1)">1</button>
+    <button onclick="showText(2)">2</button>
+    <button onclick="showText(3)">3</button>
+    <button onclick="showText(4)">4</button>
+    <button onclick="showText(5)">5</button>
   </div>
 
-  <div id="result"></div>
+  <div id="result">Välj en knapp...</div>
 
   <script>
-    function showNumber(num) {
-      document.getElementById("result").innerText = num;
+    // Här lägger du in dina egna texter!
+    const messages = [
+      "", // tom (för index 0)
+      "Stavangern", 
+      "Magmusen", 
+      "Ypas", 
+      "Vargen", 
+      "Laman"
+    ];
+
+    function showText(num) {
+      document.getElementById("result").innerText = messages[num];
     }
   </script>
 </body>
