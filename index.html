@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Klicka på knappar!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      width: 80px;
+      height: 80px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      background: #ff6b6b;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    button:active {
+      transform: translateY(2px);
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+      min-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Klicka på en knapp!</h1>
+  
+  <div class="buttons">
+    <button onclick="showNumber(1)">1</button>
+    <button onclick="showNumber(2)">2</button>
+    <button onclick="showNumber(3)">3</button>
+    <button onclick="showNumber(4)">4</button>
+    <button onclick="showNumber(5)">5</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function showNumber(num) {
+      document.getElementById("result").innerText = num;
+    }
+  </script>
+</body>
+</html>
